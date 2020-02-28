@@ -7,9 +7,16 @@ def valid_move?(board, index)
       return true
     end
   end
-
+  
   def available?(num)
   if num.between?(0, 8) == true
+    return true
+  else
+    return false
+  end
+end
+
+  if (position_taken?(board, index)) == false && (available?(index) == true)
     return true
   else
     return false
